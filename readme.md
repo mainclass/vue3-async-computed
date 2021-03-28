@@ -15,9 +15,11 @@ Vue.createApp({
 
 }).use(asyncomputed, {
 
-    async profile() {
-        const url = `https://httpbin.org/get?userID=${this.userID}`;
-        return fetch(url).then(r => r.json());
+    async profile(result) {
+        result.value = `loading profile for user ${this.userID}...`;
+        const response = await fetch(`https://httpbin.org/get?userID=${this.userID}`);
+        const data = await response.json();
+        result.value = data;
     },
 
 }).mount('#app');
