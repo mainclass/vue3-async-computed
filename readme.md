@@ -32,3 +32,10 @@ And then, in html template:
 ## Install
 
 Install using `npm install vue3-async-computed`
+
+## Examples
+
+- Basic example, the app displays price information for any selected crypto currency: [JSFiddle](https://jsfiddle.net/andriika/otagfzjL/)
+
+## Todo
+Describe how to approach manual re-calculation of the async computed properties. Provide an example.

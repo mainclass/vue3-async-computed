@@ -1,6 +1,6 @@
 {
   "name": "vue3-async-computed",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "This Vue 3 plugin allows you to create computed properties that are computed asynchronously",
   "main": "index.js",
   "scripts": {
