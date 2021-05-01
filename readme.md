@@ -3,7 +3,10 @@
 This Vue 3 plugin allows you to create computed properties that are computed asynchronously.
 
 ```js
-import asyncomputed from 'vue3-async-computed';
+import * as Vue from 'vue';
+import * as AsyncComputed from 'vue3-async-computed';
+
+const asyncComputed = AsyncComputed.createPlugin({ ref: Vue.ref });
 
 Vue.createApp({
 
@@ -13,7 +16,7 @@ Vue.createApp({
         }
     },
 
-}).use(asyncomputed, {
+}).use(asyncComputed, {
 
     async profile(result) {
         result.value = `loading profile for user ${this.userID}...`;
@@ -24,7 +27,9 @@ Vue.createApp({
 
 }).mount('#app');
 ```
-And then, in html template:
+
+And then, in HTML:
+
 ```html
 <div>{{ userID }}: {{ profile }}</div>
 ```
